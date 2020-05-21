@@ -1,0 +1,12 @@
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\eUseControl.Domain.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\eUseControl.Domain.pdb
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\eUseControl.Helpers.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\bin\Debug\eUseControl.Helpers.pdb
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\obj\Debug\eUseControl.Domain.csprojAssemblyReference.cache
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\obj\Debug\eUseControl.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\obj\Debug\eUseControl.Domain.csproj.CopyComplete
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\obj\Debug\eUseControl.Domain.dll
+C:\Users\Helios\Desktop\Universitate\SEMESTRUL 2\TEHNOLOGII WEB\eUseControl\eUseControl\eUseControl.Domain\obj\Debug\eUseControl.Domain.pdb

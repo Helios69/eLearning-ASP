@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "NewTheme";
+    Layout = "~/Views/Account/_AccountLayout.cshtml";
+}
+
+    <div class="content col-md-10">
+        <div class="courses-container">
+            <div class="new-theme whiteSection">
+                @using (Html.BeginForm("NewTheme", "Courses", FormMethod.Post, new { autocomplete = "off" }))
+                {
+                    <div class="form-group">
+                        <label for="theme-name">Course</label>
+                        <select class="custom-select group-select" name="CourseName">
+                            @foreach (var course in ViewBag.Courses)
+                            {
+                                <option value=@course.ShortName>@course.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="theme-name">Theme name</label>
+                        <input name="Name" type="text" class="form-control" id="theme-name" placeholder="Enter theme name">
+                    </div>
+                    <div class="form-group">
+                        <label for="theme-text">Text</label>
+                        <textarea name="Text" type="text" class="form-control theme-text" id="theme-text" placeholder="Write here.."></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn">Add theme</button>
+                }
+            </div>
+        </div>
+        <!--
+    <div class="courses-list whiteSection">
+        <ul class="courses-list__list">
+            <li class="courses-list__item"><a href="#">PPE</a></li>
+            <li class="courses-list__item active"><a href="#">TW</a></li>
+            <li class="courses-list__item"><a href="#">AC</a></li>
+            <li class="courses-list__item"><a href="#">AMOO</a></li>
+            <li class="courses-list__item"><a href="#">GC</a></li>
+        </ul>
+    </div>-->
+    </div>

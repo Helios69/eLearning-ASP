@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "All Courses";
+    Layout = "~/Views/Account/_AccountLayout.cshtml";
+}
+
+<div class="content col-md-10">
+    <div class="courses-container">
+        <a href="@Url.Action("NewTheme", "Courses")" class="btn add-theme">Add new</a>
+
+        @if ((((IEnumerable<dynamic>)ViewBag.Themes).Count() > 0))
+        {
+            foreach (var theme in ViewBag.Themes)
+            {
+                <div class="course-item whiteSection">
+                    <span class="course__date">@theme.Date</span>
+                    <h2 class="course__title">@theme.Name</h2>
+                    <a href="#" class="course__subject">@theme.CourseName</a>
+                    <p class="course__text">
+                        @theme.Text
+                    </p>
+                </div>
+                
+
+            }
+        }else { <p class="no-themes">No themes to show</p>}
+
+
+
+    </div>
+    <div class="courses-list whiteSection">
+
+        @if ((((IEnumerable<dynamic>)ViewBag.Courses).Count() > 0))
+        {
+        <ul class="courses-list__list">
+            @foreach (var course in ViewBag.Courses)
+            {
+            <li class="courses-list__item"><a href="#">@course.ShortName</a></li>
+            }
+        </ul>} else {<span class="no-courses">No courses to show</span>}
+
+
+            
+        </div>
+</div>

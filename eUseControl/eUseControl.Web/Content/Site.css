@@ -1,0 +1,259 @@
+﻿body {
+    background-color: #edeef0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    background-color: #5181b8;
+    color: #fff;
+    border: none;
+}
+
+    .btn:hover {
+        background-color: #5789c2;
+        color: #fff;
+    }
+
+.whiteSection {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e3e4e8;
+}
+
+.navbar {
+    background-color: #4a76a8;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: rgba(255,255,255,.8);
+    }
+
+.navbar-brand img {
+    height: 35px;
+    width: auto;
+}
+
+/* Login Page */
+.loginForm, .registerForm {
+    margin: 50px auto 0;
+}
+
+    .loginForm .form-control, .registerForm .form-control {
+        margin-bottom: 15px;
+    }
+
+        .loginForm .form-control:focus, .registerForm .form-control:focus {
+            outline: none !important;
+            box-shadow: 0 0 10px #4a76a8;
+        }
+
+    .loginForm .btn, .registerForm .btn {
+        width: 100px;
+        margin-right: 20px;
+    }
+
+.forgotPass {
+    color: #2a5885;
+}
+
+    .forgotPass:hover {
+        color: #296198;
+    }
+
+/* Register Page */
+.registerForm .btn {
+    margin-left: 15px;
+}
+/* user-top-menu */
+.navbar .container {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.user-menu {
+    cursor: pointer;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+    .user-menu:hover {
+        background-color: #3d6898;
+    }
+
+.user-avatar {
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+    .user-avatar img {
+        height: 100%;
+        width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+.dropdown-item:active {
+    background-color: #e4eaf0;
+}
+
+.dropdown-item, .dropdown-item:active, .dropdown-item:hover {
+    color: #2a5885;
+}
+.sidebar__element.active{
+    background-color: red;
+}
+.sidebar__element a {
+    color: #285473;
+    padding: 5px 15px;
+    display: block;
+}
+
+.sidebar__element:hover {
+    background-color: #e1e5eb;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+}
+
+.courses-container {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.course-item {
+    margin-bottom: 15px;
+}
+
+.course__title {
+    color: #1e3c5f;
+}
+
+.course__subject {
+    color: #2a5895;
+    margin-right: auto;
+}
+
+.course__date {
+    font-style: italic;
+    text-align: right;
+    display: block
+}
+
+.courses-list, .groups-list {
+    align-self: flex-start;
+    padding: 10px 0;
+    width: 250px;
+    margin-left: 15px;
+}
+
+.courses-list__list, .groups-list__list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.courses-list__item a, .groups-list__item a {
+    color: #2a5885;
+    padding: 5px 20px;
+    width: 100%;
+    display: block;
+}
+
+    .courses-list__item a:hover, .groups-list__item a:hover {
+        background-color: #f0f2f5;
+    }
+
+.courses-list__item.active, .groups-list__item.active {
+    background-color: #f0f2f5;
+    border-left: 2px solid #5181b8;
+}
+
+.add-theme {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.theme-text {
+    min-height: 200px;
+}
+
+/* schedule */
+.schedule {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    text-align: center;
+}
+
+.day__name {
+    color: #5181b8;
+    font-size: 20px;
+}
+
+.day__lessons {
+    display: flex;
+    justify-content: center;
+}
+
+.day__lesson {
+    padding: 10px;
+    border-right: 1px solid #e3e4e8;
+    display: flex;
+    flex-direction: column;
+}
+
+    .day__lesson:last-child {
+        border-right: none;
+    }
+
+.subject__teacher {
+    font-size: 13px;
+}
+
+.subject__type, .subject__time {
+    font-size: 13px;
+    font-style: italic;
+    opacity: .8;
+}
+
+.no-courses{
+    margin-left: 15px;
+}
+.no-themes{
+    text-align: center;
+}
