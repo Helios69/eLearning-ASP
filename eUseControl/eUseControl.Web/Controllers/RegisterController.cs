@@ -5,6 +5,7 @@ using eUseControl.BusinessLogic.Interfaces;
 using System.Web;
 using eUseControl.BusinessLogic;
 using eUseControl.Domain.Entities.User;
+using System;
 
 namespace eUseControl.Web.Controllers
 {
@@ -34,7 +35,8 @@ namespace eUseControl.Web.Controllers
             {
                 Username = user.Username,
                 Password = user.Password,
-                Email = user.Email
+                Email = user.Email,
+                Level = user.Level
             };
 
             _register.UserRegister(data);
@@ -50,7 +52,7 @@ namespace eUseControl.Web.Controllers
             HttpCookie cookie = _session.GenCookie(u.Credential);
             ControllerContext.HttpContext.Response.Cookies.Add(cookie);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Login");
         }
     }
 }

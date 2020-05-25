@@ -7,6 +7,7 @@ using AutoMapper;
 using eUseControl.BusinessLogic.DBModel;
 using eUseControl.Domain.Entites.User;
 using eUseControl.Domain.Entities.User;
+using eUseControl.Domain.Enum;
 using eUseControl.Helpers;
 namespace eUseControl.BusinessLogic.Core
 {
@@ -19,9 +20,11 @@ namespace eUseControl.BusinessLogic.Core
 
             using (var todo = new UserContext())
             {
+                //URole foo = 
                 new_user.Username = data.Username;
                 new_user.Password = LoginHelper.HashGen(data.Password);
                 new_user.Email = data.Email;
+                new_user.Level = (URole)data.Level;
 
                 todo.Users.Add(new_user);
                 todo.SaveChanges();

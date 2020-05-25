@@ -8,7 +8,6 @@ namespace eUseControl.Web.Controllers
     public class AccountController : BaseController
     {
         // GET: Account
-        [AllowAnonymous]
         public ActionResult Index()
         {
             SessionStatus();
@@ -27,14 +26,16 @@ namespace eUseControl.Web.Controllers
 
         public ActionResult Schedule()
         {
-            return View();
-        }
-        public ActionResult Register()
-        {
-            return View();
-        }
-        public ActionResult Login()
-        {
+            if ((string)System.Web.HttpContext.Current.Session["LoginStatus"] != "login")
+            {
+                return RedirectToAction("Index", "Login");
+            }
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData u = new UserData
+            {
+                Username = user.Username,
+            };
+            ViewBag.username = u.Username;
             return View();
         }
     }

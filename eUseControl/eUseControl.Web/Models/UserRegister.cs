@@ -16,5 +16,9 @@ namespace eUseControl.Web.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Level")]
+        public int Level { get; set; }
     }
 }

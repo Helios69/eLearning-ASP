@@ -1,4 +1,5 @@
-﻿using eUseControl.Web.Models;
+﻿using eUseControl.Web.Extensions;
+using eUseControl.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,23 +16,22 @@ namespace eUseControl.Web.Controllers
         {
             IEnumerable<Theme> themes = db.Themes;
             IEnumerable<Course> courses = db.Courses;
-
-            /*var themesJoin = db.Themes.Join(db.Courses,
-            theme => theme.CourseId,
-            course => course.Id,
-            (theme, course) => new
+            if ((string)System.Web.HttpContext.Current.Session["LoginStatus"] != "login")
             {
-                theme.Name,
-                theme.Date,
-                CourseName = course.Name,
-                theme.Text
-            });*/
-            
+                return RedirectToAction("Index", "Login");
+            }
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData u = new UserData
+            {
+                Username = user.Username,
+            };
+            ViewBag.username = u.Username;
             ViewBag.Themes = themes;
             ViewBag.Courses = courses;
             return View();
         }
         [HttpGet]
+        [AdminMod]
         public ActionResult NewTheme()
         {
             IEnumerable<Course> courses = db.Courses;
@@ -40,13 +40,14 @@ namespace eUseControl.Web.Controllers
             return View();
         }
         [HttpPost]
+        [AdminMod]
+
         public ActionResult NewTheme(Theme theme)
         {
             IEnumerable<Course> courses = db.Courses;
             ViewBag.Courses = courses;
             theme.Date = DateTime.Now;
             db.Themes.Add(theme);
-            // сохраняем в бд все изменения
             db.SaveChanges();
             return View();
         }

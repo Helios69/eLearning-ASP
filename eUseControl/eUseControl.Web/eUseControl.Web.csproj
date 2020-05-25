@@ -139,6 +139,7 @@
     <Content Include="Views\Account\_AccountLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AccessFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
