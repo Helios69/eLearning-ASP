@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model eUseControl.Web.Models.UserRegister
+
+
+
+@using (Html.BeginForm("Index", "Register", FormMethod.Post, new { @class = "registerForm whiteSection col-xl-6 col-lg-8 col-sm-12 row" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="formSection1 col-md-6">
+        @Html.TextBoxFor(m => m.Username, new
+                     {
+                         placeholder = "Username",
+                         title = "Username",
+                         value = "",
+                         name = "username",
+                         @class = "form-control",
+                         type = "username"
+                     })
+        @Html.TextBoxFor(m => m.Password, new
+                   {
+                       placeholder = "Password",
+                       title = "Password",
+                       value = "*",
+                       name = "password",
+                       @class = "form-control",
+                       type = "password"
+                   })
+    </div>
+
+    <div class="formSection2 col-md-6">
+        @Html.TextBoxFor(m => m.Email, new
+                    {
+                        placeholder = "E-mail",
+                        title = "E-mail",
+                        value = "",
+                        name = "email",
+                        type = "email",
+                        @class = "form-control"
+                    })
+    </div>
+
+        
+    <button type="submit" class="btn">Register</button>
+}
+
+
+<!--
+    <input type="text" class="form-control" placeholder="First Name">
+    <input type="text" class="form-control" placeholder="Last Name">
+    <select class="custom-select group-select">
+        <option value="1">TI-181</option>
+        <option value="2">TI-182</option>
+        <option value="3">TI-183</option>
+    </select>
+    </div>
+    <div class="formSection2 col-md-6">
+        <input type="email" class="form-control" placeholder="Email">
+        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Confirm password">
+    </div>
+
+
+
+--!>
