@@ -5,12 +5,30 @@ using System.Linq;
 using System.Web;
 using AutoMapper;
 using eUseControl.BusinessLogic.DBModel;
+using eUseControl.Domain.Entites.User;
 using eUseControl.Domain.Entities.User;
 using eUseControl.Helpers;
 namespace eUseControl.BusinessLogic.Core
 {
     public class UserApi
     {
+
+        internal URegisterResp UserRegisterAction(URegisterData data)
+        {
+            UDbTable new_user = new UDbTable();
+
+            using (var todo = new UserContext())
+            {
+                new_user.Username = data.Username;
+                new_user.Password = LoginHelper.HashGen(data.Password);
+                new_user.Email = data.Email;
+
+                todo.Users.Add(new_user);
+                todo.SaveChanges();
+            }
+            return new URegisterResp();
+        }
+
         internal ULoginResp UserLoginAction(ULoginData data)
         {
             UDbTable result;

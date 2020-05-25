@@ -8,6 +8,7 @@ namespace eUseControl.Web.Controllers
     public class AccountController : BaseController
     {
         // GET: Account
+        [AllowAnonymous]
         public ActionResult Index()
         {
             SessionStatus();
